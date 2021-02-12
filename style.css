@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#calculator {
+    width: 300px;
+    height: 400px;
+    background-color: #242424;
+    color: #242424;
+    padding: 1px;
+    align-self: center;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "display display display display"
+                         "clearAll clearAll delete division"
+                         "num7 num8 num9 multiplication"
+                         "num4 num5 num6 addition"
+                         "num1 num2 num3 substraction"
+                         "decimal num0 equals equals";
+}
+
+#display {
+    color: #f5f5f5;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "previousOperand" "currentOperand";
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-right: 15px;
+    grid-area: display;
+}
+
+button {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 25px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #242424;
+    color: #f5f5f5;
+}
+
+#num0 {
+    grid-area: num0;
+}
+
+#num1 {
+    grid-area: num1;
+}
+
+#num2 {
+    grid-area: num2;
+}
+
+#num3 {
+    grid-area: num3;
+}
+
+#num4 {
+    grid-area: num4;
+}
+
+#num5 {
+    grid-area: num5;
+}
+
+#num6 {
+    grid-area: num6;
+}
+
+#num7 {
+    grid-area: num7;
+}
+
+#num8 {
+    grid-area: num8;
+}
+
+#num9 {
+    grid-area: num9;
+}
+
+#delete {
+    grid-area: delete;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+#equals:hover {
+    background-color: #4158D0;
+    color: #f5f5f5;
+}
+
+#clearAll {
+    grid-area: clearAll;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#addition {
+    grid-area: addition;
+}
+
+#substraction {
+    grid-area: substraction;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#division {
+    grid-area: division;
+}
+
+#previousOperand {
+    grid-area: previousOperand;
+    font-size: 20px;
+    opacity: 0.75;
+}
+
+#currentOperand {
+    grid-area: currentOperand;
+    font-size: 25px;
+}
